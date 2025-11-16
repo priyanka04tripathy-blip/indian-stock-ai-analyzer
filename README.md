@@ -54,13 +54,27 @@ streamlit run app.py
 5. **View Advanced Charts**: Interactive candlestick charts with SMA 20/50, volume bars, and technical indicators
 6. **Get Recommendations**: Click "Get Best Indian Stocks Today" for AI-powered top picks
 
-## API Keys
+## API Keys Setup
 
-The app uses the following API keys (configured in `app.py`):
-- **Groq API**: For AI-powered analysis using llama-3.3-70b-versatile model
-- **Serper API**: For fetching comprehensive stock news and market intelligence
+The app uses environment variables for API keys. Follow these steps:
 
-**Note**: Make sure to add your own API keys in `app.py` if you're cloning this repository.
+1. **Create a `.env` file** in the project root:
+   ```bash
+   cd stock
+   touch .env
+   ```
+
+2. **Add your API keys** to the `.env` file:
+   ```
+   GROQ_API_KEY=your_groq_api_key_here
+   SERPER_API_KEY=your_serper_api_key_here
+   ```
+
+3. **Get your API keys**:
+   - **Groq API**: Get from https://console.groq.com/keys
+   - **Serper API**: Get from https://serper.dev/api-key
+
+**Note**: The `.env` file is already in `.gitignore` and won't be committed to GitHub.
 
 ## Requirements
 
